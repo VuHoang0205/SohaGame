@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/imgView"
+    android:adjustViewBounds="true"
+    android:layout_height="match_parent"
+    >
+
+   <!-- <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_height="@dimen/soha_height_popup_warning" />-->
+
+</ImageView>

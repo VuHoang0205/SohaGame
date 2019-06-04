@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DemoSdkSoha3300</string>
+    <string name="main_activity_login">Login</string>
+    <string name="main_activity_payment">Payment</string>
+    <string name="main_activity_level_up">Level Up</string>
+    <string name="main_activity_logout">Logout</string>
+    <string name="main_activity_rotate">Rotate</string>
+    <string name="dialog_select_server_1">Server 1</string>
+    <string name="dialog_select_server_2">Server 2</string>
+    <string name="main_activity_rotate_screen">Rotate Screen</string>
+
+    <string name="google_app_id" translatable="false">1:14305352823:android:438703208749759b</string>
+    <!--<string name="gcm_defaultSenderId" translatable="false">14305352823</string>-->
+
+</resources>

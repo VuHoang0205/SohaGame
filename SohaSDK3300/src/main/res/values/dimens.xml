@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="s_10dp">10dp</dimen>
+
+    <dimen name="s_radius_normal">2dp</dimen>
+    <dimen name="s_radius_dialog">15dp</dimen>
+    <dimen name="s_stroke_normal">1dp</dimen>
+    <dimen name="s_padding_normal">10dp</dimen>
+    <dimen name="s_margin_object">10dp</dimen>
+    <dimen name="s_update_size_logo">120dp</dimen>
+    <dimen name="s_padding_top_dialog">20dp</dimen>
+    <dimen name="explainWith">270dp</dimen>
+    <dimen name="explainTextSize">14sp</dimen>
+    <dimen name="explainTextSizeHitder">16sp</dimen>
+    <dimen name="explainPadding">10sp</dimen>
+    <dimen name="explainPadding2">20sp</dimen>
+    <dimen name="s_5dp">5dp</dimen>
+    <dimen name="s_2dp">2dp</dimen>
+    <dimen name="s_3dp">3dp</dimen>
+    <dimen name="s_width_img_warning">180dp</dimen>
+    <dimen name="s_heigh_img_warning">40dp</dimen>
+    <dimen name="s_width_popup_warning">100dp</dimen>
+    <dimen name="s_height_popup_warning">40dp</dimen>
+    <dimen name="s_size_popup_dashboard">45dp</dimen>
+    <dimen name="s_size_item_dashboard">35dp</dimen>
+    <dimen name="s_width_dialog_dashboard">260dp</dimen>
+    <dimen name="s_offset_hide_dashboard">20dp</dimen>
+    <dimen name="s_50dp">50dp</dimen>
+    <dimen name="s_40dp">40dp</dimen>
+    <dimen name="s_dashboard_radius">70dp</dimen>
+    <dimen name="s_height_dialog_dashboard">320dp</dimen>
+    <dimen name="s_15dp">15dp</dimen>
+    <dimen name="s_size_db_indicator">6dp</dimen>
+    <dimen name="s_round_webview">0dp</dimen>
+
+    <dimen name="s_login_width">350dp</dimen>
+    <dimen name="s_login_height">410dp</dimen>
+    <dimen name="s_width_dialog_generic">320dp</dimen>
+    <dimen name="s_size_border_dashboard_webview">12dp</dimen>
+    <dimen name="s_16dp">16dp</dimen>
+    <dimen name="s_20dp">20dp</dimen>
+    <dimen name="s_60dp">60dp</dimen>
+
+</resources>

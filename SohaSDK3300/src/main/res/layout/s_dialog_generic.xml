@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/s_width_dialog_generic"
+    android:layout_height="wrap_content"
+    android:background="@drawable/s_bg_dialog"
+    android:orientation="vertical"
+
+
+    >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/s_padding_top_dialog"
+        android:layout_marginRight="@dimen/s_padding_top_dialog"
+        android:gravity="center"
+        android:paddingTop="@dimen/s_padding_top_dialog"
+        android:paddingBottom="@dimen/s_10dp"
+        android:text="@string/s_dialog_notify"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginLeft="@dimen/s_padding_top_dialog"
+        android:layout_marginRight="@dimen/s_padding_top_dialog"
+        android:gravity="center"
+        android:paddingBottom="@dimen/s_padding_top_dialog"
+        android:text="" />
+
+
+    <View
+        android:id="@+id/vDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tvDes"
+        android:background="@color/s_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vDivider"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:paddingTop="@dimen/s_15dp"
+            android:paddingBottom="@dimen/s_15dp"
+            android:text="@string/s_cancel"
+            android:textAllCaps="false" />
+
+        <View
+            android:id="@+id/vDivider2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/s_gray" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:paddingTop="@dimen/s_15dp"
+            android:paddingBottom="@dimen/s_15dp"
+            android:text="@string/s_ok"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+
+</RelativeLayout>

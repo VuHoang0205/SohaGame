@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="radiusNormal">2dp</dimen>
+    <dimen name="paddingNormal">10dp</dimen>
+    <dimen name="strokeNormal">1dp</dimen>
+</resources>

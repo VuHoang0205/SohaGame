@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llSortChangePopup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/s_bg_toast"
+    android:orientation="vertical"
+    android:padding="@dimen/com_facebook_auth_dialog_corner_radius">
+
+    <TextView
+        android:id="@+id/tvHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/s_16dp"
+        android:layout_marginRight="@dimen/s_16dp"
+        android:gravity="left"
+        android:padding="5dp"
+        android:textColor="#FFF"
+        android:textSize="16sp" />
+
+</LinearLayout>

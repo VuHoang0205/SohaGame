@@ -1,0 +1,49 @@
+<resources>
+    <!--<string name="google_app_id" translatable="false">1:14305352823:android:438703208749759b</string>-->
+    <string name="s_app_name">SDKS3300</string>
+    <string name="s_error_generic">Đã có lỗi xảy ra, vui lòng thử lại.</string>
+    <string name="s_ok">Đồng ý</string>
+    <string name="s_cancel">Hủy bỏ</string>
+    <string name="s_try_again">Thử lại</string>
+    <string name="s_sdk_version" translatable="false">3.6.3.1</string>
+
+    <string name="update_download_now">Tải ngay bản cập nhật</string>
+    <string name="update_continue">Tiếp tục</string>
+    <string name="update_des_update">Đã có bản cập nhật mới cho %s</string>
+    <string name="s_login_giveup">Bỏ qua</string>
+    <string name="s_login_connect_account">Nối tài khoản</string>
+    <string name="s_login_des_connect_account">Bạn nên nối tài khoản để có thể được hỗ trợ tốt nhất trong quá trình chơi game </string>
+    <string name="s_login_connect_account_success">Kết nối tài khoản thành công</string>
+    <string name="please_check_connect_internet">Vui lòng kiểm tra lại kết nối mạng</string>
+    <string name="s_error_login_fb">Lỗi login Facebook, vui lòng thử lại</string>
+    <string name="s_error_init">Lỗi khởi tạo SDK</string>
+    <string name="s_exit">Thoát</string>
+    <string name="s_payment_error_init_iap">Khởi tạo IAP lỗi. Vui lòng thử lại!</string>
+    <string name="s_popup_connect_account_playnow">Nối tài khoản</string>
+    <string name="s_popup_connect_account_playnow3">Kết nối ngay</string>
+    <string name="contentOpenFanpageFB">Bạn có muốn mở app Facebook không ?</string>
+    <string name="contentOpenFanpageTwitter">Bạn có muốn mở app Twitter không ?</string>
+    <string name="s_popup_connect_account_playnow_2">Bạn nên nối tài khoản để có thể được hỗ trợ tốt nhất trong quá trình chơi game. </string>
+    <string name="s_open_app_fb">Bạn có muốn mở app Facebook không?</string>
+    <string name="s_open_app_twitter">Bạn có muốn mở app Twitter</string>
+    <string name="s_open_app_s_care">Bạn có muốn mở app SohaCare?</string>
+    <string name="s_error_dashboard_detail_pick_image">Ảnh chọn không hợp lệ. Vui lòng chọn ảnh khác.</string>
+    <string name="s_dialog_exit_game">Bạn có muốn thoát game?</string>
+    <string name="s_login_hello">Xin chào %s</string>
+    <string name="s_dialog_notify">Thông báo</string>
+    <string name="s_dashboard_exit">Bạn có muốn ẩn Dashboard hay không? Dashboard sẽ hiện lên vào lần đăng nhập kế tiếp</string>
+    <string name="gcm_defaultSenderId" translatable="false">416648225355</string>
+    <string name="s_fragment_payment_success">Thanh toán thành công</string>
+    <string name="cf_close_dashboard">Bạn có muốn ẩn Dashboard hay không?</string>
+    <string name="logInMobile">Đăng nhập</string>
+    <string name="logInFacebook">Facebook</string>
+    <string name="textviewMore">Thêm</string>
+    <string name="contentOpenFanpageSohaCare">Bạn có muốn mở app SohaCare không ?</string>
+    <string name="notify">Thông Báo</string>
+    <string name="closeDashBoard">Bạn có muốn ẩn Dashboard hay không?</string>
+    <string name="agree">Đồng ý</string>
+    <string name="cancelCloseDb">Hủy bỏ</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

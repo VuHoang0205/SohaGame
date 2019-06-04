@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_view_dash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/s_size_item_dashboard"
+            android:layout_height="@dimen/s_size_item_dashboard"
+            android:layout_margin="@dimen/s_2dp" />
+
+        <ImageView
+            android:id="@+id/ivNotify"
+            android:layout_width="@dimen/s_10dp"
+            android:layout_height="@dimen/s_10dp"
+            android:layout_gravity="right"
+            android:background="@drawable/s_bg_notify_red" />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
