@@ -122,6 +122,7 @@ public abstract class BaseLoginFragment extends BaseWebViewFragment implements B
         getUserInfo(accessToken);
     }
 
+    // Xác thực token khi token đc server trả về tiep tuc goi xac thuc
     protected void getUserInfo(String mAccessToken) {
         String plantextRequest = createObjectRequestLogin(mAccessToken).toString();
         String request = EncryptorEngine.encryptDataNoURLEn(plantextRequest, Constants.PUBLIC_KEY);
@@ -142,6 +143,7 @@ public abstract class BaseLoginFragment extends BaseWebViewFragment implements B
     protected boolean onShouldOverrideUrlLoading(String url) {
         if (url.contains("access_token")) {
             Uri uri = Uri.parse(url);
+     // Sau khi goi Api User Info lay thong tin update token tiep tuc roi xac thuc
             updateAccessToken(uri.getQueryParameter("access_token"));
             getUserInfo();
             return true;

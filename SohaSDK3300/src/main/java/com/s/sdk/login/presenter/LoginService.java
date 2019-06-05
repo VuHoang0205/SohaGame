@@ -17,6 +17,7 @@ public interface LoginService {
     Call<BaseResponse> getUserInfo(@Field("signed_request") String bodyRequest);
 
 
+    // Login facebook
     @FormUrlEncoded
     @POST("api/GET/Auth/LoginBig4?")
     Call<BaseResponse> loginBig4(@Field("signed_request") String bodyRequest);

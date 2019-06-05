@@ -252,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     /**
-     * demo dialog select server
+     * demo dialog select server call api mapUserGame
      */
     private void showDialogSelectServer() {
         DialogSelectServer dialog = new DialogSelectServer(MainActivity.this);
@@ -262,6 +262,7 @@ public class MainActivity extends AppCompatActivity {
                 SSDK.getInstance().mapUserGame(MainActivity.this, String.valueOf(areaId),
                         String.valueOf(character.getRoleId()),
                         character.getRoleName(), String.valueOf(character.getRoleLevel()));
+                Log.e(">>>>>","object: "+character.getRoleId());
             }
 
         });

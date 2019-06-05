@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.View;
 
 import com.facebook.appevents.AppEventsLogger;
@@ -261,11 +262,11 @@ public class SSDK {
             @Override
             public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
 
+
             }
 
             @Override
             public void onFailure(Call<BaseResponse> call, Throwable t) {
-
             }
         });
     }
@@ -321,6 +322,7 @@ public class SSDK {
 //                Log.e("Param_SDK", "api/POST/App/DB \n " + signResquest);
                 if (res == null) return;
                 if ("success".equalsIgnoreCase(res.getStatus())) {
+                    Log.e(">>>>", "data: " + response.body());
                     if (!activity.isFinishing() && res.getListData() != null && res.getListData().size() > 0) {
                         PrefUtils.putObject(Constants.PREF_LIST_DB_CONFIG, res.getListData());
                         checkShowNotify(res.getListData());

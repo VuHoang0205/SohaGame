@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,6 +58,7 @@ public class LoginFragment extends BaseLoginFragment implements LoginContract.Vi
     protected String getURLRequest() {
         //test return "https://soap.soha.vn/dialog/webview/loginv2";
 
+        // Check Accset token
         SLoginResult loginResult = PrefUtils.getObject(Constants.PREF_LOGIN_RESULT, SLoginResult.class);
         //String accessToken = "";
         if (loginResult != null) {//auto login
@@ -64,6 +66,7 @@ public class LoginFragment extends BaseLoginFragment implements LoginContract.Vi
             //accessToken = loginResult.getAccessToken();
             return null;
         }
+        Log.e(">>>>",Constants.URL_LOGIN + signRequest());
         return Constants.URL_LOGIN + signRequest();
     }
 
@@ -99,6 +102,8 @@ public class LoginFragment extends BaseLoginFragment implements LoginContract.Vi
         STracker.trackEvent("sdk", STracker.ACTION_LOGIN_OPEN, "");
         presenter = new LoginPresenter();
         presenter.attachView(this);
+
+        // 1. Api get appInfo
         presenter.getAppInfo();
 
 //        //test firebase
@@ -118,6 +123,8 @@ public class LoginFragment extends BaseLoginFragment implements LoginContract.Vi
         super.onDestroy();
     }
 
+    // Get UserSdkInfo phục vị SDK
+
     @Override
     public void onResponseGetUserInfo(final UserSdkInfo resUserInfo) {
         if (resUserInfo.getStatus().equals("success")) {
@@ -129,7 +136,7 @@ public class LoginFragment extends BaseLoginFragment implements LoginContract.Vi
                 }
             }, 200);
 
-            //check update
+            //check update ban cap nhat
             UserSdkInfo.Update update = resUserInfo.getUpdate();
             if (update != null && update.getStatus().equals("1")) {
                 if (update.getForce().equals("0")) {//don't need force update
@@ -224,6 +231,7 @@ public class LoginFragment extends BaseLoginFragment implements LoginContract.Vi
         if (!oldUserId.equals(loginResult.getUserId())) {
             PrefUtils.putString(Constants.PREF_USER_ID_OLD, loginResult.getUserId());
             PrefUtils.putBoolean(Constants.PREF_IS_SEND_PUSH_NOTIFY_SUCCESS, false);
+   // Check UserId rồi gọi Api register device to server de push noti
             sendTokenFCM(getContext());
         } else {
             boolean isSuccess = PrefUtils.getBoolean(Constants.PREF_IS_SEND_PUSH_NOTIFY_SUCCESS, false);
@@ -233,7 +241,7 @@ public class LoginFragment extends BaseLoginFragment implements LoginContract.Vi
         }
     }
 
-    // Send token to server
+    // Send token to server register
     private void sendTokenFCM(final Context context) {
         FirebaseInstanceId.getInstance().getInstanceId()
                 .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
@@ -315,6 +323,7 @@ public class LoginFragment extends BaseLoginFragment implements LoginContract.Vi
     }
 
 
+    // Get cac thong tin phuc vu sdk ham nay dc goi ben BaseLoginFragment
     @Override
     public void onSuccessGetAppInfo() {
         if (isAutoLogin) {

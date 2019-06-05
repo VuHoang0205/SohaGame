@@ -40,6 +40,7 @@ public class LoginPresenter implements LoginContract.Presenter {
         baseView = null;
     }
 
+    // SDK goi ngam Api appInfor de lay thoong tin va api register
     @Override
     public void getAppInfo() {
         final ProgressDialog progressDialog = new ProgressDialog(baseView.getContext());
@@ -70,6 +71,8 @@ public class LoginPresenter implements LoginContract.Presenter {
                     showDialogError(baseView.getContext().getString(R.string.s_error_generic));
                     return;
                 }
+
+                // Ket qua tra ve ResponseInit
                 ResponseInit resDecode = res.decodeResponse(ResponseInit.class);
                 if (resDecode == null) {
                     //Utils.showToastError(SContext.getApplicationContext());
@@ -79,20 +82,26 @@ public class LoginPresenter implements LoginContract.Presenter {
                 if (resDecode.getStatus().equals("success") && resDecode.getData() != null) {
                     PrefUtils.putObject(Constants.PREF_RESPONSE_INIT_DATA, resDecode.getData());
                     SLoginResult loginResult = PrefUtils.getObject(Constants.PREF_LOGIN_RESULT, SLoginResult.class);
+
+                    // Check show Popup canh baodo tuoi game
                     if (loginResult == null && resDecode.getData().getShow_warning_ingame() == 1) {
                         SDialog.showDialogWarning(baseView.getContext());
                     }
                     if (resDecode.getData().getActive_mqtt().equals("1")) {
                         MQTTTracker.getInstance().initMQTT();
                     }
+
+                    // Api appinfo success
                     baseView.onSuccessGetAppInfo();
                     return;
                 }
 
                 //con lai loi
+                // Api appinfo error loi
                 showDialogError(resDecode.getMessage());
             }
 
+            // Api appinfo error loi
             @Override
             public void onFailure(Call<BaseResponse> call, Throwable t) {
                 Alog.e("onFailure : "+t.getMessage());

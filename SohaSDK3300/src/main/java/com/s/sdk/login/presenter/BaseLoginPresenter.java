@@ -70,11 +70,15 @@ public class BaseLoginPresenter implements BaseLoginContract.Presenter {
 //                String plantText = UserSdkInfo.decodeResponse(signedResponse);
 //                Gson gson = new Gson();
 //                UserSdkInfo.UserSdkInfo resUserInfo = gson.fromJson(plantText, UserSdkInfo.UserSdkInfo.class);
+
+                // Thong tin UserSdkInfo get cac thong tin de phuc vu
                 UserSdkInfo resUserInfo = res.decodeResponse(UserSdkInfo.class);
                 if (resUserInfo == null) {
                     showErrorGeneric();
                     return;
                 }
+
+     // Set token
                 baseView.updateAccessToken(accessToken);
                 if (resUserInfo.getLoginResult() != null) {
                     resUserInfo.getLoginResult().setAccessToken(accessToken);
